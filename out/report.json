@@ -1,0 +1,137 @@
+{
+  "audit": [
+    {
+      "consumer_id": "A",
+      "event": "assign",
+      "partition_id": "p0",
+      "reason": "initial assignment",
+      "seq": 1,
+      "timestamp": 139992.861211759
+    },
+    {
+      "consumer_id": "A",
+      "event": "assign",
+      "partition_id": "p1",
+      "reason": "initial assignment",
+      "seq": 2,
+      "timestamp": 139992.861223174
+    },
+    {
+      "consumer_id": "B",
+      "event": "assign",
+      "partition_id": "p2",
+      "reason": "initial assignment",
+      "seq": 3,
+      "timestamp": 139992.861227032
+    },
+    {
+      "consumer_id": "B",
+      "event": "assign",
+      "partition_id": "p3",
+      "reason": "initial assignment",
+      "seq": 4,
+      "timestamp": 139992.861229548
+    },
+    {
+      "consumer_id": "A",
+      "event": "revoke",
+      "partition_id": "p0",
+      "reason": "consumer leaving",
+      "seq": 5,
+      "timestamp": 139992.861567549
+    },
+    {
+      "consumer_id": "A",
+      "event": "revoke",
+      "partition_id": "p1",
+      "reason": "consumer leaving",
+      "seq": 6,
+      "timestamp": 139992.861575918
+    },
+    {
+      "consumer_id": "B",
+      "event": "assign",
+      "partition_id": "p0",
+      "reason": "reassigned after A left",
+      "seq": 7,
+      "timestamp": 139992.861587192
+    },
+    {
+      "consumer_id": "B",
+      "event": "assign",
+      "partition_id": "p1",
+      "reason": "reassigned after A left",
+      "seq": 8,
+      "timestamp": 139992.861590279
+    },
+    {
+      "consumer_id": "B",
+      "event": "revoke",
+      "partition_id": "p2",
+      "reason": "consumer leaving",
+      "seq": 9,
+      "timestamp": 139992.862945437
+    },
+    {
+      "consumer_id": "B",
+      "event": "revoke",
+      "partition_id": "p3",
+      "reason": "consumer leaving",
+      "seq": 10,
+      "timestamp": 139992.862952642
+    },
+    {
+      "consumer_id": "B",
+      "event": "revoke",
+      "partition_id": "p0",
+      "reason": "consumer leaving",
+      "seq": 11,
+      "timestamp": 139992.86295611
+    },
+    {
+      "consumer_id": "B",
+      "event": "revoke",
+      "partition_id": "p1",
+      "reason": "consumer leaving",
+      "seq": 12,
+      "timestamp": 139992.862958987
+    }
+  ],
+  "audit_violations": [],
+  "group_id": "demo-group",
+  "ownership": {},
+  "partitions": {
+    "p0": {
+      "committed_offset": 20,
+      "lag": 0,
+      "owner": null,
+      "replayed": [
+        "p0#3"
+      ]
+    },
+    "p1": {
+      "committed_offset": 20,
+      "lag": 0,
+      "owner": null,
+      "replayed": []
+    },
+    "p2": {
+      "committed_offset": 20,
+      "lag": 0,
+      "owner": null,
+      "replayed": []
+    },
+    "p3": {
+      "committed_offset": 20,
+      "lag": 0,
+      "owner": null,
+      "replayed": []
+    }
+  },
+  "totals": {
+    "consumer_count": 0,
+    "deliveries": 81,
+    "partition_count": 4,
+    "replays": 1
+  }
+}

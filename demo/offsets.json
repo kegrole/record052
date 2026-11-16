@@ -1,0 +1,42 @@
+{
+  "group_id": "demo-group",
+  "partitions": {
+    "p0": 20,
+    "p1": 20,
+    "p2": 20,
+    "p3": 20
+  },
+  "consumers": ["A", "B"],
+  "steps": [
+    {"action": "consume", "consumer": "A", "partition": "p0"},
+    {"action": "consume", "consumer": "A", "partition": "p0"},
+    {"action": "consume", "consumer": "A", "partition": "p0"},
+    {"action": "consume", "consumer": "A", "partition": "p0"},
+    {"action": "consume", "consumer": "A", "partition": "p1"},
+    {"action": "consume", "consumer": "A", "partition": "p1"},
+    {"action": "consume", "consumer": "A", "partition": "p1"},
+    {"action": "consume", "consumer": "A", "partition": "p1"},
+    {"action": "consume", "consumer": "B", "partition": "p2"},
+    {"action": "consume", "consumer": "B", "partition": "p2"},
+    {"action": "consume", "consumer": "B", "partition": "p2"},
+    {"action": "consume", "consumer": "B", "partition": "p2"},
+    {"action": "consume", "consumer": "B", "partition": "p3"},
+    {"action": "consume", "consumer": "B", "partition": "p3"},
+    {"action": "consume", "consumer": "B", "partition": "p3"},
+    {"action": "consume", "consumer": "B", "partition": "p3"},
+    {"action": "commit", "consumer": "A", "partition": "p0", "offset": 3},
+    {"action": "commit", "consumer": "A", "partition": "p1", "offset": 4},
+    {"action": "commit", "consumer": "B", "partition": "p2", "offset": 4},
+    {"action": "commit", "consumer": "B", "partition": "p3", "offset": 4},
+    {"action": "leave", "consumer": "A"},
+    {"action": "consume", "consumer": "B", "partition": "p0"},
+    {"action": "consume_rest", "consumer": "B", "partition": "p0"},
+    {"action": "consume_rest", "consumer": "B", "partition": "p1"},
+    {"action": "consume_rest", "consumer": "B", "partition": "p2"},
+    {"action": "consume_rest", "consumer": "B", "partition": "p3"},
+    {"action": "commit_rest", "consumer": "B", "partition": "p0", "async": true},
+    {"action": "commit_rest", "consumer": "B", "partition": "p1", "async": true},
+    {"action": "commit_rest", "consumer": "B", "partition": "p2", "async": true},
+    {"action": "commit_rest", "consumer": "B", "partition": "p3", "async": true}
+  ]
+}
